@@ -7,6 +7,7 @@ describe("Invoices Features", () => {
 
   // Testons que l'on peut bien créer une facture pour un client donné
   it("should create and list invoices for a customer", () => {
+    resetDatabase();
     // Commençons par créer un client (customer) pour notre test, nous l'appellerons Elise Dupont
     let customerFullName = faker.person.fullName();
     cy.visit(BASE_URL + "create");
