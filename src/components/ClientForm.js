@@ -13,6 +13,7 @@ const ClientForm = (props) => {
           placeholder="Nom complet"
           onChange={props.updateFormData}
           value={props.form.fullName}
+          required 
         />
       </div>
       <div className="mb-3">
@@ -25,6 +26,7 @@ const ClientForm = (props) => {
           placeholder="Email"
           onChange={props.updateFormData}
           value={props.form.email}
+          required
         />
       </div>
       <button type="submit" className="btn btn-primary">Enregistrer</button>
