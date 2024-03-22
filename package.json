@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
-    "start": "cd app && ng serve --host 0.0.0.0 --disable-host-check --hmr",
+    "test": "jest ./tests",
+    "start": "npm run serve ",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "dev": "webpack --mode development",
