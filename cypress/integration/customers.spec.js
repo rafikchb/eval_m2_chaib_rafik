@@ -9,6 +9,7 @@ describe("Customers Features", () => {
   // Il permet non seulement de tester qu'on peut créer un client mais
   // surtout qu'on retrouve dans la page d'accueil la liste des clients créés
   it("should create a new customer", () => {
+    resetDatabase();
     let customerFullName = faker.person.fullName();
     let customerEmail = faker.internet.email();
 

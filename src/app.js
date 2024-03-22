@@ -2,24 +2,22 @@
 console.log("Tout fonctionne");
 
 import React from "react";
-import ReactDOM from "react-dom";
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter ,Routes , Route} from "react-router-dom";
-import ClientListPage from "./pages/ClientListPage";
-import Home from "./pages/Home";
-import ClientForm from "./components/ClientForm";
-import Client from "./components/Client";
-import Invoice from "./components/invoice";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Client from "./components/ClientDetailsPage";
+import ClientForm from "./components/ClientCreationPage";
+import Invoice from "./components/InvoiceCreationPage";
+import HomePage from "./pages/HomePage";
 
 
 const Hello = () => {
        return <BrowserRouter>
        <Routes>
-        <Route path="/" element={<Home/>} />  /*this is the home page it should display all the clients*/
-        <Route path="/create" element={<ClientForm/>} /> 
-        <Route path="/:id" index element={<Client/>} />
-        <Route path="/:id/invoices/add" index element={<Invoice/>} />
-        <Route path="*" element={<h1>Not Found</h1>} />
+        <Route path="/" element={<HomePage/>} />  /*this is the home page it should display all the clients*/
+        <Route path="/create" element={<ClientForm/>} /> /*this is the form to create a new client*/
+        <Route path="/:id" index element={<Client/>} /> /*this is the page to display a single client*/
+        <Route path="/:id/invoices/add" index element={<Invoice/>} /> /*this is the page to create a new invoice*/
+        <Route path="*" element={<h1>Not Found</h1>} /> /*this is the page to display a 404 error*/
        </Routes>
        </BrowserRouter>
 }

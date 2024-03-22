@@ -2,19 +2,13 @@ import React from "react";
 import ClientList from "../components/ClientList";
 import { loadClientsFromApi } from "../api/http";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const ClientListPage = () => {
-    const [state, setState ] = useState([]);
-
-    useEffect(() => {
-        loadClientsFromApi()
-            .then((clients) => {
-                console.log("clients",clients);
-                setState(clients);
-            });
-    }, []);
  
-    return (
+    return ( <>
+        <Link to={`${window.location.origin}/create`}>Créer un client</Link>
         <ClientList clients={state} />
+        </>
     ); 
 } ; 
 
