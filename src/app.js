@@ -4,8 +4,8 @@ console.log("Tout fonctionne");
 import React from "react";
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Client from "./components/ClientDetailsPage";
-import ClientForm from "./components/ClientCreationPage";
+import Client from "./pages/ClientDetailsPage";
+import ClientForm from "./pages/ClientCreationPage";
 import Invoice from "./components/InvoiceCreationPage";
 import HomePage from "./pages/HomePage";
 
